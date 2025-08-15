@@ -1,1 +1,1 @@
-# microservices-project
+# Bus Reservation System : HCLTech Project (Training and DI)
