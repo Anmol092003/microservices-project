@@ -6,7 +6,7 @@ import lombok.*;
 
 @Entity
 @Table(name = "buses")
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
+
 public class Bus {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,5 +26,58 @@ public class Bus {
     // Default price per seat (can be overridden per schedule if needed)
     @Column(nullable = false)
     private Double pricePerSeat;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getBusName() {
+		return busName;
+	}
+
+	public void setBusName(String busName) {
+		this.busName = busName;
+	}
+
+	public String getBusType() {
+		return busType;
+	}
+
+	public void setBusType(String busType) {
+		this.busType = busType;
+	}
+
+	public Integer getTotalSeats() {
+		return totalSeats;
+	}
+
+	public void setTotalSeats(Integer totalSeats) {
+		this.totalSeats = totalSeats;
+	}
+
+	public Double getPricePerSeat() {
+		return pricePerSeat;
+	}
+
+	public void setPricePerSeat(Double pricePerSeat) {
+		this.pricePerSeat = pricePerSeat;
+	}
+
+	public Bus(Long id, String busName, String busType, Integer totalSeats, Double pricePerSeat) {
+		super();
+		this.id = id;
+		this.busName = busName;
+		this.busType = busType;
+		this.totalSeats = totalSeats;
+		this.pricePerSeat = pricePerSeat;
+	}
+
+	public Bus() {
+		super();
+	}
 }
 
